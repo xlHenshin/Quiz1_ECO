@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -86,7 +87,7 @@ public class NexoOne extends AppCompatActivity {
     public void checkboxVerificacion(){
 
         continuar.setEnabled(false);
-
+        continuar.setBackgroundResource(R.drawable.editbuttonbackground2);
         new Thread(
 
                 ()->{
@@ -104,6 +105,7 @@ public class NexoOne extends AppCompatActivity {
                             runOnUiThread(
                                     ()->{
                                         continuar.setEnabled(true);
+                                        continuar.setBackgroundResource(R.drawable.editbuttonbackground);
                                     }
                             );
 
@@ -113,6 +115,7 @@ public class NexoOne extends AppCompatActivity {
 
                                     ()->{
                                         continuar.setEnabled(false);
+                                        continuar.setBackgroundResource(R.drawable.editbuttonbackground2);
                                     }
 
                             );

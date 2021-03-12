@@ -108,6 +108,7 @@ public class SymptomOne extends AppCompatActivity {
     public void checkboxVerificacion(){
 
         finalizar.setEnabled(false);
+        finalizar.setBackgroundResource(R.drawable.editbuttonbackground2);
 
         new Thread(
 
@@ -127,6 +128,7 @@ public class SymptomOne extends AppCompatActivity {
                             runOnUiThread(
                                     ()->{
                                         finalizar.setEnabled(true);
+                                        finalizar.setBackgroundResource(R.drawable.editbuttonbackground);
                                     }
                             );
 
@@ -136,6 +138,7 @@ public class SymptomOne extends AppCompatActivity {
 
                                     ()->{
                                         finalizar.setEnabled(false);
+                                        finalizar.setBackgroundResource(R.drawable.editbuttonbackground2);
                                     }
 
                             );
