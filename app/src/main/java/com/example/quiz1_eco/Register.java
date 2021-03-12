@@ -41,7 +41,6 @@ public class Register extends AppCompatActivity {
                         i.putExtra("nombre", nombreUsuario);
                         i.putExtra("id", idUsuario);
                         startActivity(i);
-                        nombre.setText("");
                         finish();
                     }
 

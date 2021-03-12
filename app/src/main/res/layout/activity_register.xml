@@ -5,6 +5,7 @@
     android:id="@+id/registerScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Register">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="64dp"
         android:text="Nuevo Registro"
+        android:textColor="#787878"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,18 +27,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="60dp"
+        android:background="@drawable/edittextbackground"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="#838383"
+        android:textColorHint="#838383"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/continuar1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="480dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/editbuttonbackground"
         android:text="Continuar"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,9 +58,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/edittextbackground"
         android:ems="10"
         android:hint="Identificación"
         android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="#838383"
+        android:textColorHint="#838383"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -60,9 +74,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="28dp"
-        android:text="Nuevo Registro"
+        android:text="Introduzca los siguientes datos"
+        android:textColor="#787878"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:text="Introduzca los siguientes datos" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@
     android:id="@+id/nexoScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".NexoOne">
 
     <CheckBox
@@ -13,16 +14,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
+        android:buttonTint="#787878"
         android:text="Hice un viaje nacional en los \núltimos 3 meses"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkNexo2" />
 
     <Button
         android:id="@+id/continuar2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/editbuttonbackground"
         android:text="Continuar"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +42,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="64dp"
         android:text="Nexo epidemiológico"
+        android:textColor="#787878"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,11 +54,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
-        android:text="Nuevo Registro"
+        android:text="Elige las opciones que apliquen a tu caso:"
+        android:textColor="#787878"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:text="Elige las opciones que apliquen a tu caso:" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <CheckBox
         android:id="@+id/checkNexo1"
@@ -58,7 +66,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
+        android:buttonTint="#787878"
         android:text="Estuve en contacto con alguien que \ntiene coranavirus"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -68,7 +78,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
+        android:buttonTint="#787878"
         android:text="Hice un viaje internacional en los \núltimos 3 meses"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkNexo1" />
 
@@ -78,7 +90,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
+        android:buttonTint="#787878"
         android:text="Soy trabajador de la salud"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkNexo3" />
 
@@ -88,7 +102,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
+        android:buttonTint="#787878"
         android:text="Ninguna de las anteriores"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkNexo4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,14 +5,19 @@
     android:id="@+id/symptomScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".SymptomOne">
 
     <Button
         android:id="@+id/finalizar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/editbuttonbackground"
         android:text="Finalizar"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +29,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
+        android:buttonTint="#787878"
         android:text="Ninguno"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkSymptom6" />
 
@@ -34,7 +41,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
+        android:buttonTint="#787878"
         android:text="Fiebre"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -44,7 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
+        android:buttonTint="#787878"
         android:text="Fatiga"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkSymptom4" />
 
@@ -55,6 +66,7 @@
         android:layout_marginStart="44dp"
         android:layout_marginTop="64dp"
         android:text="Síntomas"
+        android:textColor="#787878"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +78,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
+        android:buttonTint="#787878"
         android:text="Dolor de garganta"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkSymptom1" />
 
@@ -76,7 +90,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
+        android:buttonTint="#787878"
         android:text="Tos"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkSymptom3" />
 
@@ -87,6 +103,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
         android:text="Nuevo Registro"
+        android:textColor="#787878"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
@@ -98,7 +115,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
+        android:buttonTint="#787878"
         android:text="Dificultad para respirar"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkSymptom5" />
 
@@ -109,6 +128,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
         android:text="Congestión nasal"
+        android:textColor="#787878"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkSymptom2" />
+        app:layout_constraintTop_toBottomOf="@+id/checkSymptom2"
+        android:buttonTint="#787878" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,7 +47,6 @@ public class NexoOne extends AppCompatActivity {
                     if(check1.isChecked() || check2.isChecked() || check3.isChecked() || check4.isChecked() || check5.isChecked()){
 
                         checkboxValor();
-                        Toast.makeText(this, "nexoValor= " +  nexoValor, Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(this, SymptomOne.class);
                         i.putExtra("nombre2",nombreUsuario);
                         i.putExtra("id2",idUsuario);

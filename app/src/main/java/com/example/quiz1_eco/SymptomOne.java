@@ -104,7 +104,7 @@ public class SymptomOne extends AppCompatActivity {
     public void guardarInfo() {
 
         SharedPreferences preferences = getSharedPreferences("datos", MODE_PRIVATE);
-        String infoUsuario = nombreUsuario + ", " + idUsuario + ", " + valorTotal + "\n";
+        String infoUsuario = nombreUsuario + "," + idUsuario + "," + valorTotal + "\n";
         String infoActual = preferences.getString("usuario", "");
         preferences.edit().putString("usuario", infoActual + infoUsuario).apply();
     }
