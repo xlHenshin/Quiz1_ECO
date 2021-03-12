@@ -41,6 +41,7 @@ public class SymptomOne extends AppCompatActivity {
         idUsuario = getIntent().getExtras().getString("id2");
         nexoValor = getIntent().getExtras().getInt("valores");
 
+        checkboxVerificacion();
         finalizar();
     }
 
@@ -50,17 +51,12 @@ public class SymptomOne extends AppCompatActivity {
 
                 v -> {
 
-                    if (check1.isChecked() || check2.isChecked() || check3.isChecked() || check4.isChecked() || check5.isChecked()
-                            || check6.isChecked() || check7.isChecked()) {
-
-                        checkboxValor();
-                        valorTotal = sintomaValor + nexoValor;
-                        Intent i = new Intent(this, MainActivity.class);
-                        guardarInfo();
-                        startActivity(i);
-                        finish();
-
-                    }
+                    checkboxValor();
+                    valorTotal = sintomaValor + nexoValor;
+                    Intent i = new Intent(this, MainActivity.class);
+                    guardarInfo();
+                    startActivity(i);
+                    finish();
 
                 }
 
@@ -107,5 +103,49 @@ public class SymptomOne extends AppCompatActivity {
         String infoUsuario = nombreUsuario + "," + idUsuario + "," + valorTotal + "\n";
         String infoActual = preferences.getString("usuario", "");
         preferences.edit().putString("usuario", infoActual + infoUsuario).apply();
+    }
+
+    public void checkboxVerificacion(){
+
+        finalizar.setEnabled(false);
+
+        new Thread(
+
+                ()->{
+
+                    while(true){
+
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+                        if(check1.isChecked() || check2.isChecked() || check3.isChecked() || check4.isChecked() || check5.isChecked()
+                                || check6.isChecked() || check7.isChecked()){
+
+                            runOnUiThread(
+                                    ()->{
+                                        finalizar.setEnabled(true);
+                                    }
+                            );
+
+                        }else{
+
+                            runOnUiThread(
+
+                                    ()->{
+                                        finalizar.setEnabled(false);
+                                    }
+
+                            );
+                        }
+
+                    }
+
+                }
+
+        ).start();
+
     }
 }

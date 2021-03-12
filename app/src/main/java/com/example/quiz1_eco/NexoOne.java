@@ -35,6 +35,7 @@ public class NexoOne extends AppCompatActivity {
         nombreUsuario = getIntent().getExtras().getString("nombre");
         idUsuario = getIntent().getExtras().getString("id");
 
+        checkboxVerificacion();
         continuar();
     }
 
@@ -44,18 +45,13 @@ public class NexoOne extends AppCompatActivity {
 
                 v->{
 
-                    if(check1.isChecked() || check2.isChecked() || check3.isChecked() || check4.isChecked() || check5.isChecked()){
-
-                        checkboxValor();
-                        Intent i = new Intent(this, SymptomOne.class);
-                        i.putExtra("nombre2",nombreUsuario);
-                        i.putExtra("id2",idUsuario);
-                        i.putExtra("valores",nexoValor);
-                        startActivity(i);
-                        finish();
-                    }else{
-                            Toast.makeText(this, "Escoja al menos una opción", Toast.LENGTH_SHORT).show();
-                    }
+                    checkboxValor();
+                    Intent i = new Intent(this, SymptomOne.class);
+                    i.putExtra("nombre2",nombreUsuario);
+                    i.putExtra("id2",idUsuario);
+                    i.putExtra("valores",nexoValor);
+                    startActivity(i);
+                    finish();
 
                 }
 
@@ -84,6 +80,49 @@ public class NexoOne extends AppCompatActivity {
 
             nexoValor=nexoValor+3;
         }
+
+    }
+
+    public void checkboxVerificacion(){
+
+        continuar.setEnabled(false);
+
+        new Thread(
+
+                ()->{
+
+                    while(true){
+
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+                        if(check1.isChecked() || check2.isChecked() || check3.isChecked() || check4.isChecked() || check5.isChecked()){
+
+                            runOnUiThread(
+                                    ()->{
+                                        continuar.setEnabled(true);
+                                    }
+                            );
+
+                        }else{
+
+                            runOnUiThread(
+
+                                    ()->{
+                                        continuar.setEnabled(false);
+                                    }
+
+                            );
+                        }
+
+                    }
+
+                }
+
+        ).start();
 
     }
 }
